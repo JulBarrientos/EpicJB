@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -15,8 +16,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "EpicJB"
 include(":app")
+
 include(":features:daylist")
 include(":features:photolist")
 include(":features:photoscreen")
+
 include(":core:network")
 include(":core:local")
+include(":core:ui")

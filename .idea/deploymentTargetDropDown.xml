@@ -5,6 +5,15 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="build-logic.convention">
+        <State />
+      </entry>
+      <entry key="core.local">
+        <State />
+      </entry>
+      <entry key="core.network">
+        <State />
+      </entry>
     </value>
   </component>
 </project>
