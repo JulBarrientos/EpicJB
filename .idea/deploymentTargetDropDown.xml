@@ -14,6 +14,12 @@
       <entry key="core.network">
         <State />
       </entry>
+      <entry key="core.ui">
+        <State />
+      </entry>
+      <entry key="features.daylist">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

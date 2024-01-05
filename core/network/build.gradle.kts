@@ -1,5 +1,8 @@
 plugins {
-    alias(libs.plugins.epicjb.android.application)
+    alias(libs.plugins.epicjb.android.library)
+    alias(libs.plugins.epicjb.android.hilt)
+    id("kotlinx-serialization")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -10,10 +13,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.core.ktx)
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.kotlin.serialization)
 }

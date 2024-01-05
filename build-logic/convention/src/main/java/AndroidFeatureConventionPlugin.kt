@@ -8,8 +8,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
-                apply("wallpaper.android.library")
-                apply("wallpaper.android.hilt")
+                apply("epicjb.android.library")
+                apply("epicjb.android.hilt")
             }
 
 
@@ -20,8 +20,9 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("testImplementation", kotlin("test"))
                 add("androidTestImplementation", kotlin("test"))
 
-                add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
-
+                add("implementation", libs.findLibrary("hilt.navigation.compose").get())
+                add("implementation", libs.findLibrary("lifecycle.runtimeCompose").get())
+                add("implementation", libs.findLibrary("lifecycle.viewModelCompose").get())
             }
         }
     }

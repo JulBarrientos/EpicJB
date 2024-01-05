@@ -43,6 +43,10 @@ gradlePlugin {
             id = "epicjb.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        register("androidLibraryCompose") {
+            id = "epicjb.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
         register("androidFeature") {
             id = "epicjb.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
@@ -51,6 +55,9 @@ gradlePlugin {
             id = "epicjb.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
-
+        register("jvmLibrary") {
+            id = "epicjb.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
     }
 }

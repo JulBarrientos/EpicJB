@@ -15,6 +15,8 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "EpicJB"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 include(":app")
 
 include(":features:daylist")
