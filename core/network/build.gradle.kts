@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.epicjb.android.library)
     alias(libs.plugins.epicjb.android.hilt)
     id("kotlinx-serialization")
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -13,6 +12,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.okhttp.logging)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.moshi)
+    implementation(libs.moshi.converter)
 }

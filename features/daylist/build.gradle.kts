@@ -4,12 +4,10 @@ plugins {
 }
 
 android {
-    defaultConfig {
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
     namespace = "com.jbarrientos.epicjb.daylist"
 }
 
 dependencies {
-    implementation(libs.hilt.navigation.compose)
+    implementation(projects.core.network)
+    implementation(libs.kotlinx.coroutines.core)
 }
