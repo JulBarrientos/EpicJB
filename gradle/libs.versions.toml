@@ -28,6 +28,7 @@ room = "2.6.1"
 truth = "1.1.5"
 work = "2.9.0"
 kotlinxCoroutines = "1.7.3"
+kotlin1910 = "1.9.10"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -87,4 +88,5 @@ epicjb-android-application = { id = "epicjb.android.application", version = "uns
 epicjb-android-application-compose = { id = "epicjb.android.application.compose", version = "unspecified" }
 epicjb-android-library = { id = "epicjb.android.library", version = "unspecified" }
 epicjb-android-library-compose = { id = "epicjb.android.library.compose", version = "unspecified" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin1910" }
 

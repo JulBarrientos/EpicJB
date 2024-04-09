@@ -5,7 +5,13 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="app.data">
+        <State />
+      </entry>
       <entry key="build-logic.convention">
+        <State />
+      </entry>
+      <entry key="core.data">
         <State />
       </entry>
       <entry key="core.local">

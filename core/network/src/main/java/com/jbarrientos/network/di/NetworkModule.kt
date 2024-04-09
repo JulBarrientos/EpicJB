@@ -1,6 +1,8 @@
 package com.jbarrientos.network.di
 
 import com.jbarrientos.network.api.ApiService
+import com.jbarrientos.network.datasource.daylistdatasource.DayListDataSource
+import com.jbarrientos.network.datasource.daylistdatasource.DayListDataSourceImpl
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -53,5 +55,11 @@ internal object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+    fun provideApiService(retrofit: Retrofit): ApiService =
+        retrofit.create(ApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun providesDayListDataSource(apiService: ApiService): DayListDataSource =
+        DayListDataSourceImpl(apiService)
 }
