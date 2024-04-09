@@ -11,6 +11,9 @@
       <entry key="build-logic.convention">
         <State />
       </entry>
+      <entry key="core.common">
+        <State />
+      </entry>
       <entry key="core.data">
         <State />
       </entry>
