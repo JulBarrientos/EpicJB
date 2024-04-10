@@ -5,5 +5,5 @@ import retrofit2.Response
 
 interface DayListDataSource {
 
-    suspend fun getDayList(): Response<DayList>
+    suspend fun getDayList(): Response<List<DayList>>
 }

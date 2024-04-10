@@ -36,7 +36,7 @@ android {
 
 dependencies {
     implementation(projects.features.daylist)
-
+    implementation(libs.androidx.core.splashscreen)
     implementation(libs.core.ktx)
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))

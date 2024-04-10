@@ -13,6 +13,8 @@ android {
 
 dependencies {
     implementation(projects.core.network)
+    implementation(projects.core.common)
+
     implementation(libs.okhttp.logging)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.kotlin.serialization)

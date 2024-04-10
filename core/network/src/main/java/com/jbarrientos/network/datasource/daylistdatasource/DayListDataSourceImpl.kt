@@ -9,6 +9,6 @@ class DayListDataSourceImpl @Inject constructor(
     private val apiService: ApiService
 ) : DayListDataSource {
 
-    override suspend fun getDayList(): Response<DayList> =
+    override suspend fun getDayList(): Response<List<DayList>> =
         apiService.getDayList()
 }

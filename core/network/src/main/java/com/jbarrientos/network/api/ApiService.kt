@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface ApiService {
     @GET("api/enhanced/all")
-    suspend fun getDayList(): Response<DayList>
+    suspend fun getDayList(): Response<List<DayList>>
 }
