@@ -36,6 +36,12 @@ android {
 
 dependencies {
     implementation(projects.features.daylist)
+    implementation(projects.features.photolist)
+    implementation(projects.features.photoscreen)
+
+    implementation(projects.core.common)
+    implementation(projects.core.ui)
+
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.core.ktx)
     implementation(libs.activity.compose)

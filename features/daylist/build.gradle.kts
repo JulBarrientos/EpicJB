@@ -13,4 +13,5 @@ dependencies {
     implementation(projects.core.network)
     implementation(projects.core.ui)
     implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.ui.tooling.preview)
 }
