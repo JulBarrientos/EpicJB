@@ -1,4 +1,10 @@
 package com.jbarrientos.photolist
 
-class PhotoListScreen {
+import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
+
+@Composable
+fun PhotoListScreen(
+    viewModel: PhotoListViewModel = hiltViewModel()
+) {
 }
