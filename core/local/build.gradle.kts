@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.epicjb.android.application)
+    alias(libs.plugins.epicjb.android.library)
 }
 
 android {
@@ -10,10 +10,5 @@ android {
 }
 
 dependencies {
-    implementation(libs.core.ktx)
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+
 }
