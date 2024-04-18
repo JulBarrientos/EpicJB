@@ -1,6 +1,7 @@
 package com.jbarrientos.daylist
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -51,9 +52,12 @@ fun DayListScreen(
         when (dayListState) {
             is Result.Error -> TODO()
             is Result.Loading -> LoadingWheel()
-            is Result.Success -> DayList((dayListState as Result.Success).data)
+            is Result.Success -> DayList(
+                days = (dayListState as Result.Success).data
+            )
         }
     }
+
 }
 
 @Composable
@@ -79,7 +83,9 @@ fun DayList(days: List<DayList>) {
         )
         LazyColumn {
             items(days) { day ->
-                DayCard(date = LocalDate.parse(day.date, DateTimeFormatter.ISO_DATE))
+                DayCard(
+                    date = LocalDate.parse(day.date, DateTimeFormatter.ISO_DATE)
+                )
             }
         }
     }
@@ -87,10 +93,16 @@ fun DayList(days: List<DayList>) {
 
 @Composable
 fun DayCard(date: LocalDate) {
+    val dayOfWeek = date.dayOfWeek.toString()
+    val dateFormatted = date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+    val goToPhotoList = LocalOnClickDay.current
     Card(
         modifier = Modifier
             .height(IntrinsicSize.Max)
-            .padding(start = 24.dp, end = 24.dp, bottom = 8.dp, top = 8.dp),
+            .padding(start = 24.dp, end = 24.dp, bottom = 8.dp, top = 8.dp)
+            .clickable (
+                onClick = { goToPhotoList(dayOfWeek, date.toString()) }
+            ),
         shape = RoundedCornerShape(15.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFF212833)
@@ -107,20 +119,22 @@ fun DayCard(date: LocalDate) {
                 verticalArrangement = Arrangement.Center,
             ) {
                 Text(
-                    text = date.dayOfWeek.toString(),
+                    text = dayOfWeek,
                     color = Color.White,
                     fontSize = 21.sp,
                 )
                 Text(
-                    text = date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
+                    text = dateFormatted,
                     color = Color(0xFFB2B7BD)
                 )
 
             }
             Box(
-                modifier = Modifier.fillMaxHeight().fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .fillMaxWidth(),
                 contentAlignment = Alignment.CenterEnd
-            ){
+            ) {
                 Icon(Icons.Default.KeyboardArrowRight, contentDescription = "")
             }
         }
