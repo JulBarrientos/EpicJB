@@ -11,4 +11,9 @@ android {
 
 dependencies {
     implementation(libs.kotlinx.coroutines.core)
+
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(libs.ui.test.junit4)
 }

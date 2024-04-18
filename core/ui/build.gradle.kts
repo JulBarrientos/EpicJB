@@ -12,4 +12,5 @@ android {
 
 dependencies {
     api(libs.compose.material3)
+    testImplementation(projects.core.testing)
 }

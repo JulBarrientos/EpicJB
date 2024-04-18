@@ -20,4 +20,7 @@ dependencies {
     implementation(libs.retrofit.kotlin.serialization)
     implementation(libs.moshi)
     implementation(libs.moshi.converter)
+
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(projects.core.testing)
 }
