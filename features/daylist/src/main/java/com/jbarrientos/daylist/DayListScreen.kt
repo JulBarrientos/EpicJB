@@ -20,6 +20,7 @@ import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -82,7 +83,7 @@ fun DayList(days: List<DayList>) {
             color = Color.White
         )
         LazyColumn {
-            items(days) { day ->
+            items(days, key = {it.date}) { day ->
                 DayCard(
                     date = LocalDate.parse(day.date, DateTimeFormatter.ISO_DATE)
                 )
@@ -105,7 +106,7 @@ fun DayCard(date: LocalDate) {
             ),
         shape = RoundedCornerShape(15.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xFF212833)
+            containerColor = MaterialTheme.colorScheme.onSurfaceVariant
         )
     ) {
         Row(

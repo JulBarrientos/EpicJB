@@ -6,6 +6,6 @@ sealed interface DayListState {
     data object Loading: DayListState
     data object Error: DayListState
     data class Success(
-        val dayList: List<DayList>
+        val dayList: List<DayList> = listOf()
     ): DayListState
 }

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.epicjb.android.application.compose)
     alias(libs.plugins.epicjb.android.hilt)
 }
+gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
 
 android {
     defaultConfig {
