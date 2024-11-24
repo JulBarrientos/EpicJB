@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -38,8 +39,8 @@ import com.jbarrientos.epicjb.ui.component.LoadingWheel
 import com.jbarrientos.epicjb.ui.theme.endGradientBackgroundColor
 import com.jbarrientos.epicjb.ui.theme.startGradientBackgroundColor
 import com.jbarrientos.network.entity.DayList
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import kotlinx.datetime.*
+import kotlinx.datetime.format.*
 
 @Composable
 fun DayListScreen(
@@ -85,17 +86,18 @@ fun DayList(days: List<DayList>) {
         LazyColumn {
             items(days, key = {it.date}) { day ->
                 DayCard(
-                    date = LocalDate.parse(day.date, DateTimeFormatter.ISO_DATE)
+                    date = LocalDate.parse(day.date)
                 )
             }
         }
     }
 }
 
+@OptIn(FormatStringsInDatetimeFormats::class)
 @Composable
 fun DayCard(date: LocalDate) {
     val dayOfWeek = date.dayOfWeek.toString()
-    val dateFormatted = date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+    val dateFormatted = LocalDate.Format { byUnicodePattern("dd/MM/yyyy") }.format(date)
     val goToPhotoList = LocalOnClickDay.current
     Card(
         modifier = Modifier
@@ -141,3 +143,10 @@ fun DayCard(date: LocalDate) {
         }
     }
 }
+
+@Preview
+@Composable
+fun DayCardPreview(){
+    DayCard( date = LocalDate.parse("2024-05-07"))
+}
+

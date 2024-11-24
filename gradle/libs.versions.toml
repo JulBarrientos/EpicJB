@@ -17,7 +17,7 @@ hilt = "2.50"
 hiltNavigationCompose = "1.2.0"
 junit = "4.13.2"
 kotlin = "1.9.21"
-kotlinxDatetime = "0.5.0"
+kotlinxDatetime = "0.6.1"
 ksp = "1.9.21-1.0.16"
 lifecycle-runtime = "2.7.0"
 material = "1.11.0"
@@ -33,6 +33,7 @@ truth = "1.1.5"
 work = "2.9.0"
 kotlinxCoroutines = "1.7.3"
 kotlin1910 = "1.9.10"
+uiToolingPreviewAndroid = "1.7.5"
 
 [libraries]
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidxCoreSplashscreen" }
@@ -82,6 +83,7 @@ kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-pl
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 work-testing = { group = "androidx.work", name = "work-testing", version = "work" }
+androidx-ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
