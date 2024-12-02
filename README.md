@@ -3,14 +3,14 @@ A modular Android application built with Kotlin, following clean architecture pr
 
 ## Features:
 
-. Modularized structure for scalability and maintainability.
-. Clean Architecture implementation with separation of concerns.
-. Dependency Injection using Hilt.
-. Build logic management with Gradle Kotlin DSL.
+- Modularized structure for scalability and maintainability.
+- Clean Architecture implementation with separation of concerns.
+- Dependency Injection using Hilt.
+- Build logic management with Gradle Kotlin DSL.
 
 ## Planned Improvements
 
-. Unit tests with MockK.
-. UI enhancements using Jetpack Compose.
-. CI/CD pipeline integration.
-. Add local database using Room 
+1. Unit tests with MockK.
+2. UI enhancements using Jetpack Compose.
+3. CI/CD pipeline integration.
+4. Add local database using Room 
